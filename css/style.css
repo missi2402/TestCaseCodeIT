@@ -1,0 +1,77 @@
+body {
+	font-family: 'Arimo', sans-serif !important;
+	font-size: 14px;
+}
+.modal-content {
+	border-radius: 0 !important;
+}
+nav {
+	background: #282c37;
+}
+/* add .nav-justified, see: https://github.com/twbs/bootstrap/issues/18653 */
+.nav-justified {
+	width: 100%;
+}
+.nav-item {
+	float: none;
+	padding: 35px 0;
+}
+.nav-link {
+	width: 100%;
+	color: #ffffff;
+	margin-bottom: 5px;
+	text-align: center;
+}
+.nav-link:not(:last-of-type){
+	border-right: 1px solid #424757;
+}
+@media (min-width: 768px) {
+  .nav-item {
+    display: table-cell;
+    width: 1%;
+  }
+  .nav-link {
+    margin-bottom: 0;
+  }
+}
+
+#carousel-example-generic > div > div > img{
+	width: 100%;
+}
+.breadcrumb { 
+	list-style: none; 
+}
+.breadcrumb li { 
+	float: left; 
+}
+.card {
+	text-align: center;
+}
+.card img.card-img-top{
+	border-radius: 0 !important;
+	width: 100%;
+    padding: 15px 15px 0px 15px;
+}
+.card .card-block p{
+	color: #767676;
+}
+.card .card-block a, .card .card-block a:hover{
+	color: #444444;
+	font-size: 2rem;
+	font-weight: bold;
+	text-decoration: none;
+}
+.card .card-block:last-of-type {
+	text-align: left;
+	padding: 10px 1.25rem !important;
+	border-top: 1px solid rgba(0,0,0,.125);
+}
+.card .card-block a > img {
+	float: right;
+	width: 30px;
+	height: 25px;
+	margin-top: 10px;
+}
+@media screen and (max-width: 992px){
+
+}
