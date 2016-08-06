@@ -39,8 +39,19 @@ header{
     height: 35px;
     margin-left: 25px;
     text-transform: uppercase;
+    -webkit-transition: all 0.7s;
+	-moz-transition: all 0.7s;
+	transition: all 0.7s;
+}
+.top button:hover, .modal-body button:hover {
+	color: #282c37;
+	background: #fff;
+	border: 2px solid #282c37;
 }
 /* Header top > feedback */
+.modal {
+  padding: 5%!important;
+}
 .modal-md {
 	width: 450px !important;
 }
@@ -84,6 +95,28 @@ label.required:after {
   content: ' *';
   color: #c61015;
 }
+/* styles for validation*/
+.changePlaceColor::-webkit-input-placeholder {
+    color:    #dc7f7f !important;
+}
+.changePlaceColor:-moz-placeholder {
+    color:    #dc7f7f !important;
+}
+.changePlaceColor::-moz-placeholder {
+    color:    #dc7f7f !important;
+}
+.changePlaceColor:-ms-input-placeholder {
+    color:    #dc7f7f !important;
+}
+.changePlaceColor {
+	font-style: italic;	
+	font-family: 'Arimo', sans-serif !important;
+	font-size: 14px !important;
+    border: 1px solid #dc7f7f !important;
+    -webkit-box-shadow:  0px 0px 25px -5px #dc7f7f inset !important;;
+    -moz-box-shadow:  0px 0px 25px -5px #dc7f7f inset !important;
+    box-shadow: 0px 0px 25px -5px #dc7f7f inset !important;
+}
 /* Header menu */
 header nav {
 	background: #282c37;
@@ -102,23 +135,15 @@ header .nav-item {
 	width: 100%;
 	color: #ffffff;
 	text-align: center;
+	padding: 20px 0;
 }
 header a.nav-link:hover{
 	color: #fff;
 	text-decoration: underline;
 }
 header li.nav-item:not(:last-of-type) a{
-	border-right: .5px solid #fff;
+	border-right: 1px solid #fff;
 }
-@media (min-width: 768px) {
-  .nav-item {
-    display: table-cell;
-    width: 1%;
-  }
-  .nav-link {
-    margin-bottom: 0;
-  }
-} /*  DON'T KNOW*/
 /* Header slider */
 #carousel-example-generic > div > div > img{
 	margin: 0 auto;
@@ -159,12 +184,12 @@ header li.nav-item:not(:last-of-type) a{
 }
 /* Content left block */
 .panel a {
-	color: #767676;
+	color: #767676 !important;
 	text-transform: capitalize;
 	font-size: 1.143rem;
 	padding: 10px 0;
 }
-.panel a:hover, .panel a.active {
+.panel a:hover, .panel a.collapsed {
 	color: #010101;
 	text-decoration: none;
 }
@@ -183,7 +208,7 @@ header li.nav-item:not(:last-of-type) a{
 	text-decoration: underline;
 }
 .price-list {
-	margin-top: 75px;
+	margin-top: 15%;
 }
 .price-list img {
 	padding-right: 15px;
@@ -232,6 +257,9 @@ header li.nav-item:not(:last-of-type) a{
 }
 .list-inline li > a{
 	color: #767676;
+    -webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
 }
 .list-inline li:hover > a, .list-inline li.active > a {
 	color: #444444;
@@ -260,27 +288,49 @@ footer .nav-link:hover {
 	color: #4c5059;
 	text-decoration: underline;
 }
-@media screen and (max-width: 992px){
-
+/* Media */
+@media all and (max-width: 768px) {
+	header .nav-item {
+		padding: 15px 0;
+	}
+	header li.nav-item:not(:last-of-type) a{
+		border-right: 0;
+		border-bottom: 1px solid #fff;
+	}
+	.top a, .top a:hover {
+	    font-size: smaller;
+	}
+	.code-it-rights {
+		text-align: center;
+	}
 }
-.changePlaceColor::-webkit-input-placeholder {
-    color:    #dc7f7f !important;
+@media all and (min-width: 768px) {
+  .nav-item {
+    display: table-cell;
+    width: 1%;
+  }
+  .nav-link {
+    margin-bottom: 0;
+    padding: 0;
+  }
 }
-.changePlaceColor:-moz-placeholder {
-    color:    #dc7f7f !important;
-}
-.changePlaceColor::-moz-placeholder {
-    color:    #dc7f7f !important;
-}
-.changePlaceColor:-ms-input-placeholder {
-    color:    #dc7f7f !important;
-}
-.changePlaceColor {
-	font-style: italic;	
-	font-family: 'Arimo', sans-serif !important;
-	font-size: 14px !important;
-    border: 1px solid #dc7f7f !important;
-    -webkit-box-shadow:  0px 0px 25px -5px #dc7f7f inset !important;;
-    -moz-box-shadow:  0px 0px 25px -5px #dc7f7f inset !important;
-    box-shadow: 0px 0px 25px -5px #dc7f7f inset !important;
+@media all and (max-width: 576px) {
+	.top {
+		height: auto;
+	}
+	.top a, .top a:hover {
+	    font-size: 0.75rem;
+	}
+	.top div {
+    	display: block;
+    } 
+	.card .card-block a, .card .card-block a:hover {
+		font-size: 1.2rem;
+	}
+	.card .card-block a > img {
+		margin-top: 0;
+	}
+	.top button {
+		margin: 10px 0;
+	}
 }
