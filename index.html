@@ -12,27 +12,37 @@
 	</head>
 	<body>
 		<header>
-			<div class="container">
-				<img src="img/logo-topmenu.png" alt="">
-				<button class="text-uppercase" data-toggle="modal" data-target="#myModal">FeedBack</button>
+			<div class="top container">
+				<a href=""><img src="img/logo-topmenu.png" alt="CodeIT"></a>
+				<form action="#">
+					<ul>
+						<li>+3 (050) 777 77 77</li>
+						<li>+3 (050) 777 77 77</li>
+					</ul>
+					<button class="text-uppercase" data-toggle="modal" data-target="#myModal">FeedBack</button>
+				</form>
+			</div>
 				<!-- Modal -->
-				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-					<div class="modal-dialog" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-									<span aria-hidden="true">&times;</span>
-								</button>
-								<h4 class="modal-title" id="myModalLabel">Feedback</h4>
-							</div>
-							<div class="modal-body">
-								
-							</div>
-							<div class="modal-footer">
-				    			<button type="button">Submit</button>
-				    		</div>
-				    	</div>
-					</div>
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<button type="button" class="close-modal" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+						</button>
+						<div class="modal-body">
+							<form action="">
+								<label for="name" required="true">Name</label>
+								<input type="text" id="name">
+								<label for="phone">Phone</label>
+								<input type="tel" id="phone">
+								<label for="email">Email</label>
+								<input type="email" id="email">
+								<label for="text">Text</label>
+								<textarea name="" id="text" cols="30" rows="10"></textarea>
+								<button type="submit">Submit</button>
+							</form>
+						</div>
+			    	</div>
 				</div>
 			</div>
 			<nav>
@@ -72,14 +82,65 @@
 				</ol>
 				<div class="row">
 					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-						<ul>
-							<li><a href="#">cars</a></li>
-							<li><a href="#"></a></li>
-							<li><a href="#"></a></li>
-							<li><a href="#"></a></li>
-							<li><a href="#"></a></li>
-						</ul>
+						<div id="accordion" role="tablist" aria-multiselectable="true">
+							<div class="panel panel-default">
+						    	<div class="panel-heading" role="tab" id="headingOne">
+						        	<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Cars</a>
+						    	</div>
+						    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+						    </div>
+						</div>
+						<div class="panel panel-default">
+						    <div class="panel-heading" role="tab" id="headingTwo">
+						    	<a class="collapsed active" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Household appliances</a>
+						    </div>
+						    <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+						    	<ul>
+						    		<li><a href="#" class="active">Micriwaves</a></li>
+						    		<li><a href="#">Fridges</a></li>
+						    		<li><a href="#">Посудомоечные машины</a></li>
+						    		<li><a href="#">Dishwashers</a></li>
+						    	</ul>
+						    </div>
+						</div>
+						<div class="panel panel-default">
+						    <div class="panel-heading" role="tab" id="headingThree">
+						        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Mobile equipment</a>
+						    </div>
+						    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+						    </div>
+						</div>
+						<div class="panel panel-default">
+						    <div class="panel-heading" role="tab" id="headingFour">
+						        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Computers</a>
+						    </div>
+						    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+						    
+						    </div>
+						</div>
+						<div class="panel panel-default">
+						    <div class="panel-heading" role="tab" id="headingFifth">
+						        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFifth" aria-expanded="false" aria-controls="collapseThree">Clothing</a>
+						    </div>
+						    <div id="collapseFifth" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFifth">
+						    
+						    </div>
+						</div>
+						<div class="panel panel-default">
+						    <div class="panel-heading" role="tab" id="headingSixth">
+						        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSixth" aria-expanded="false" aria-controls="collapseSixth">Real estate</a>
+						    </div>
+						    <div id="collapseSixth" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSixth">
+						    
+						    </div>
+						</div>
 					</div>
+					<div class="price-list">
+						<a href="img/logo-leftblock-excel.png">
+						<img src="img/logo-leftblock-excel.png" alt="Price">Price list
+						</a>
+					</div>
+				</div>
 					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
 						<div class="card">
 							<img class="card-img-top" src="img/image-card-item.png" alt="Card image cap">
@@ -189,8 +250,20 @@
 						</div>
 					</div>
 					<!-- PAGINATION -->
-					<div class="col-lg-9 col-lg-offset-3 col-md-9 col-md-offset-3 col-sm-4 col-xs-6">
-
+					<div class="col-lg-9 col-lg-offset-3 col-md-9 col-md-offset-3 col-sm-12 col-xs-12">
+						<ul class="list-inline">
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li class="active"><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li><a href="#">6</a></li>
+							<li><a href="#">7</a></li>
+						</ul>
+						<article>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper lacinia auctor. Aliquam vitae mi ornare, tincidunt risus sed, euismod nisl. Nullam imperdiet nisi ut est imperdiet posuere. Cras sodales molestie enim eget porta. Vestibulum scelerisque blandit pulvinar. Donec condimentum malesuada neque a blandit. In sodales ex ac pharetra dictum. In interdum facilisis justo. Maecenas sit amet mi vitae purus ultrices fermentum. In vel orci erat. Suspendisse potenti. Donec arcu nunc, imperdiet id neque nec, mollis viverra nisl. Fusce egestas ligula vitae tristique dignissim.<br />
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper lacinia auctor. Aliquam vitae mi ornare, tincidunt risus sed, euismod nisl. Nullam imperdiet nisi ut est imperdiet posuere. Cras sodales molestie enim eget porta. Vestibulum scelerisque blandit pulvinar. Donec condimentum malesuada neque a blandit. In sodales ex ac pharetra dictum. In interdum facilisis justo. Maecenas sit amet mi vitae purus ultrices fermentum. In vel orci erat. Suspendisse potenti. Donec arcu nunc, imperdiet id neque nec, mollis viverra nisl. Fusce egestas ligula vitae tristique dignissim.
+						</article>
 					</div>
 				</div>
 			</div>
@@ -198,11 +271,19 @@
 		<footer>
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
 						© CodeIT 2012–2013, <br />All Rights Reserved. 
 					</div>
-					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-						
+					<div class="col-lg-8 col-md-8 col-sm-4 col-xs-6">
+						<nav>
+					        <ul class="nav nav-justified text-uppercase container">
+					            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+					            <li class="nav-item"><a class="nav-link" href="#">Catalog</a></li>
+					            <li class="nav-item"><a class="nav-link" href="#">Shipping and payment</a></li>
+					            <li class="nav-item"><a class="nav-link" href="#">Price</a></li>
+					            <li class="nav-item"><a class="nav-link" href="#">Contacts</a></li>
+					        </ul>
+					    </nav>
 					</div>
 				</div>
 			</div>
